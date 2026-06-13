@@ -8,30 +8,94 @@ from config import (TOOL_NAME, VERSION, DEV_NAME, DEV_BRAND, DEV_GITHUB,
                     DEV_YOUTUBE, DEV_WHATSAPP, COPYRIGHT)
 from utils import R, G, Y, B, M, C, W, O, PK, LG, BLD, DIM, RST
 
-# Per-letter colors
-_X  = R    # X
-_D  = W    # dash (-)
-_R1 = Y    # R
-_U  = G    # U
-_N1 = C    # N (1st)
-_N2 = M    # N (2nd)
-_E  = PK   # E
-_R2 = O    # R (2nd)
+# Per-letter art (figlet standard font)
+_LETTERS = {
+    'X': [
+        "██╗  ██╗",
+        "╚██╗██╔╝",
+        " ╚███╔╝ ",
+        " ██╔██╗ ",
+        "██╔╝ ██╗",
+        "╚═╝  ╚═╝",
+    ],
+    '-': [
+        "      ",
+        "      ",
+        "▬▬▬▬▬▬",
+        "▬▬▬▬▬▬",
+        "      ",
+        "      ",
+    ],
+    'R1': [
+        "██████╗ ",
+        "██╔══██╗",
+        "██████╔╝",
+        "██╔══██╗",
+        "██║  ██║",
+        "╚═╝  ╚═╝",
+    ],
+    'U': [
+        "██╗   ██╗",
+        "██║   ██║",
+        "██║   ██║",
+        "██║   ██║",
+        "╚██████╔╝",
+        " ╚═════╝ ",
+    ],
+    'N1': [
+        "███╗   ██╗",
+        "████╗  ██║",
+        "██╔██╗ ██║",
+        "██║╚██╗██║",
+        "██║ ╚████║",
+        "╚═╝  ╚═══╝",
+    ],
+    'N2': [
+        "███╗   ██╗",
+        "████╗  ██║",
+        "██╔██╗ ██║",
+        "██║╚██╗██║",
+        "██║ ╚████║",
+        "╚═╝  ╚═══╝",
+    ],
+    'E': [
+        "███████╗",
+        "██╔════╝",
+        "█████╗  ",
+        "██╔══╝  ",
+        "███████╗",
+        "╚══════╝",
+    ],
+    'R2': [
+        "██████╗ ",
+        "██╔══██╗",
+        "██████╔╝",
+        "██╔══██╗",
+        "██║  ██║",
+        "╚═╝  ╚═╝",
+    ],
+}
 
-# X-RUNNER with proper per-letter box-drawing art
-# dash (-) uses a simple mid-line style
-PIXEL_ART = [
-    f" {_X}{BLD}██╗  ██╗{RST}  {_D}{BLD}     {RST}  {_R1}{BLD}██████╗ {RST}  {_U}{BLD}██╗   ██╗{RST}  {_N1}{BLD}███╗   ██╗{RST}  {_N2}{BLD}███╗   ██╗{RST}  {_E}{BLD}███████╗{RST}  {_R2}{BLD}██████╗ {RST}",
-    f" {_X}{BLD}╚██╗██╔╝{RST}  {_D}{BLD}     {RST}  {_R1}{BLD}██╔══██╗{RST}  {_U}{BLD}██║   ██║{RST}  {_N1}{BLD}████╗  ██║{RST}  {_N2}{BLD}████╗  ██║{RST}  {_E}{BLD}██╔════╝{RST}  {_R2}{BLD}██╔══██╗{RST}",
-    f"  {_X}{BLD}╚███╔╝{RST}  {_D}{BLD}▬▬▬▬▬{RST}  {_R1}{BLD}██████╔╝{RST}  {_U}{BLD}██║   ██║{RST}  {_N1}{BLD}██╔██╗ ██║{RST}  {_N2}{BLD}██╔██╗ ██║{RST}  {_E}{BLD}█████╗  {RST}  {_R2}{BLD}██████╔╝{RST}",
-    f"  {_X}{BLD}██╔██╗{RST}  {_D}{BLD}▬▬▬▬▬{RST}  {_R1}{BLD}██╔══██╗{RST}  {_U}{BLD}██║   ██║{RST}  {_N1}{BLD}██║╚██╗██║{RST}  {_N2}{BLD}██║╚██╗██║{RST}  {_E}{BLD}██╔══╝  {RST}  {_R2}{BLD}██╔══██╗{RST}",
-    f" {_X}{BLD}██╔╝ ██╗{RST}  {_D}{BLD}     {RST}  {_R1}{BLD}██║  ██║{RST}  {_U}{BLD}╚██████╔╝{RST}  {_N1}{BLD}██║ ╚████║{RST}  {_N2}{BLD}██║ ╚████║{RST}  {_E}{BLD}███████╗{RST}  {_R2}{BLD}██║  ██║{RST}",
-    f" {_X}{BLD}╚═╝  ╚═╝{RST}  {_D}{BLD}     {RST}  {_R1}{BLD}╚═╝  ╚═╝{RST}  {_U}{BLD} ╚═════╝ {RST}  {_N1}{BLD}╚═╝  ╚═══╝{RST}  {_N2}{BLD}╚═╝  ╚═══╝{RST}  {_E}{BLD}╚══════╝{RST}  {_R2}{BLD}╚═╝  ╚═╝{RST}",
-]
+# Per-letter colors: X=R, -=W, R=Y, U=G, N1=C, N2=M, E=PK, R2=O
+_COLORS = {
+    'X':  R,
+    '-':  W,
+    'R1': Y,
+    'U':  G,
+    'N1': C,
+    'N2': M,
+    'E':  PK,
+    'R2': O,
+}
+
+_ORDER = ['X', '-', 'R1', 'U', 'N1', 'N2', 'E', 'R2']
 
 def show_banner():
     print()
-    for line in PIXEL_ART:
+    for row in range(6):
+        line = " "
+        for key in _ORDER:
+            line += f"{_COLORS[key]}{BLD}{_LETTERS[key][row]}{RST}  "
         print(line)
     print(f"\n  {DIM}{W}░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░{RST}")
     print(f"  {W}[ v{VERSION} ]  {Y}Multi-Language Script Runner{RST}  {O}|  CODEX-M41NUL{RST}")
