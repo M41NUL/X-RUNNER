@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────
-#  X-RUNNER — banner.py  (Colorful pixel style)
+#  X-RUNNER — banner.py  (Per-letter color)
 #  Dev: Md. Mainul Islam (CODEX-M41NUL)
 # ─────────────────────────────────────────
 
@@ -8,14 +8,26 @@ from config import (TOOL_NAME, VERSION, DEV_NAME, DEV_BRAND, DEV_GITHUB,
                     DEV_YOUTUBE, DEV_WHATSAPP, COPYRIGHT)
 from utils import R, G, Y, B, M, C, W, O, PK, LG, BLD, DIM, RST
 
-# Colorful pixel-style — each letter different color
+# Per-letter color assignment:
+# X=R  -=W  R=Y  U=G  N=C  N=M  E=PK  R=O
+# Each letter block uses its own color throughout all 6 rows
+
+_X  = R    # X
+_D  = W    # dash (-)
+_R1 = Y    # R (first R)
+_U  = G    # U
+_N1 = C    # N (first N)
+_N2 = M    # N (second N)
+_E  = PK   # E
+_R2 = O    # R (second R)
+
 PIXEL_ART = [
-    f" {R}{BLD}██╗{RST}  {Y}{BLD}██╗{RST}      {G}{BLD}██████╗ {RST} {C}{BLD}██╗   ██╗{RST} {M}{BLD}███╗   ██╗{RST} {PK}{BLD}███╗   ██╗{RST} {O}{BLD}███████╗{RST} {R}{BLD}██████╗{RST} ",
-    f" {R}{BLD}╚██╗{RST}{Y}{BLD}██╔╝{RST}      {G}{BLD}██╔══██╗{RST} {C}{BLD}██║   ██║{RST} {M}{BLD}████╗  ██║{RST} {PK}{BLD}████╗  ██║{RST} {O}{BLD}██╔════╝{RST} {R}{BLD}██╔══██╗{RST}",
-    f"  {Y}{BLD}╚███╔╝{RST}  {G}{BLD}█████╗{RST} {G}{BLD}██████╔╝{RST} {C}{BLD}██║   ██║{RST} {M}{BLD}██╔██╗ ██║{RST} {PK}{BLD}██╔██╗ ██║{RST} {O}{BLD}█████╗  {RST} {R}{BLD}██████╔╝{RST}",
-    f"  {Y}{BLD}██╔██╗{RST}  {G}{BLD}╚════╝{RST} {G}{BLD}██╔══██╗{RST} {C}{BLD}██║   ██║{RST} {M}{BLD}██║╚██╗██║{RST} {PK}{BLD}██║╚██╗██║{RST} {O}{BLD}██╔══╝  {RST} {R}{BLD}██╔══██╗{RST}",
-    f" {R}{BLD}██╔╝ ██╗{RST}      {G}{BLD}██║  ██║{RST} {C}{BLD}╚██████╔╝{RST} {M}{BLD}██║ ╚████║{RST} {PK}{BLD}██║ ╚████║{RST} {O}{BLD}███████╗{RST} {R}{BLD}██║  ██║{RST}",
-    f" {R}{BLD}╚═╝  ╚═╝{RST}      {G}{BLD}╚═╝  ╚═╝{RST} {C}{BLD} ╚═════╝ {RST} {M}{BLD}╚═╝  ╚═══╝{RST} {PK}{BLD}╚═╝  ╚═══╝{RST} {O}{BLD}╚══════╝{RST} {R}{BLD}╚═╝  ╚═╝{RST}",
+    f" {_X}{BLD}██╗  ██╗{RST}{_D}{BLD}─{RST}     {_R1}{BLD}██████╗ {RST} {_U}{BLD}██╗   ██╗{RST} {_N1}{BLD}███╗   ██╗{RST} {_N2}{BLD}███╗   ██╗{RST} {_E}{BLD}███████╗{RST} {_R2}{BLD}██████╗ {RST}",
+    f" {_X}{BLD}╚██╗██╔╝{RST}{_D}{BLD}─{RST}     {_R1}{BLD}██╔══██╗{RST} {_U}{BLD}██║   ██║{RST} {_N1}{BLD}████╗  ██║{RST} {_N2}{BLD}████╗  ██║{RST} {_E}{BLD}██╔════╝{RST} {_R2}{BLD}██╔══██╗{RST}",
+    f"  {_X}{BLD}╚███╔╝{RST} {_D}{BLD}█████╗{RST} {_R1}{BLD}██████╔╝{RST} {_U}{BLD}██║   ██║{RST} {_N1}{BLD}██╔██╗ ██║{RST} {_N2}{BLD}██╔██╗ ██║{RST} {_E}{BLD}█████╗  {RST} {_R2}{BLD}██████╔╝{RST}",
+    f"  {_X}{BLD}██╔██╗{RST} {_D}{BLD}╚════╝{RST} {_R1}{BLD}██╔══██╗{RST} {_U}{BLD}██║   ██║{RST} {_N1}{BLD}██║╚██╗██║{RST} {_N2}{BLD}██║╚██╗██║{RST} {_E}{BLD}██╔══╝  {RST} {_R2}{BLD}██╔══██╗{RST}",
+    f" {_X}{BLD}██╔╝ ██╗{RST}{_D}{BLD}─{RST}     {_R1}{BLD}██║  ██║{RST} {_U}{BLD}╚██████╔╝{RST} {_N1}{BLD}██║ ╚████║{RST} {_N2}{BLD}██║ ╚████║{RST} {_E}{BLD}███████╗{RST} {_R2}{BLD}██║  ██║{RST}",
+    f" {_X}{BLD}╚═╝  ╚═╝{RST}{_D}{BLD}─{RST}     {_R1}{BLD}╚═╝  ╚═╝{RST} {_U}{BLD} ╚═════╝ {RST} {_N1}{BLD}╚═╝  ╚═══╝{RST} {_N2}{BLD}╚═╝  ╚═══╝{RST} {_E}{BLD}╚══════╝{RST} {_R2}{BLD}╚═╝  ╚═╝{RST}",
 ]
 
 def show_banner():

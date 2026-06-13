@@ -223,17 +223,18 @@ Debug mode enabled.
 
 <div align="center">
 
+<a href="https://github.com/M41NUL">
+  <img src="https://raw.githubusercontent.com/M41NUL/M41NUL/main/assets/badge.jpg" alt="CODEX-M41NUL" width="100" />
+</a>
+
+### Md. Mainul Islam · CODEX-M41NUL
+
 | | |
-|--|--|
-| **Name** | Md. Mainul Islam |
-| **Brand** | CODEX-M41NUL |
-| **GitHub** | [github.com/M41NUL](https://github.com/M41NUL) |
-| **Telegram** | [t.me/mdmainulislaminfo](https://t.me/mdmainulislaminfo) |
-| **Channel** | [t.me/codexm41nul](https://t.me/codexm41nul) |
-| **Group** | [t.me/codex_m41nul](https://t.me/codex_m41nul) |
-| **YouTube** | [youtube.com/@codexm41nul](https://youtube.com/@codexm41nul) |
-| **WhatsApp** | +8801308850528 |
-| **Email** | devmainulislam@gmail.com |
+|:---:|:---:|
+| [![GitHub](https://img.shields.io/badge/GitHub-M41NUL-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/M41NUL) | [![Telegram](https://img.shields.io/badge/Telegram-Personal-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mdmainulislaminfo) |
+| [![Channel](https://img.shields.io/badge/Channel-codexm41nul-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/codexm41nul) | [![Group](https://img.shields.io/badge/Group-codex__m41nul-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/codex_m41nul) |
+| [![YouTube](https://img.shields.io/badge/YouTube-codexm41nul-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@codexm41nul) | [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/8801308850528) |
+| [![Email](https://img.shields.io/badge/Email-devmainulislam-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:devmainulislam@gmail.com) | |
 
 </div>
 
